@@ -1,0 +1,11 @@
+{
+  "name": "NodeJS Milkcocoa Heroku Button",
+  "description": "NodeJS Milkcocoa Heroku Button",
+  "repository": "https://github.com/1ft-seabass/heroku-milkcocoa-api",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "milkcocoa"],
+  "env": {
+    "MILKCOCOA_APP_ID": "",
+    "MILKCOCOA_DATASTORE_ID": "heroku_sample"
+  }
+}
