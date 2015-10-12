@@ -48,7 +48,12 @@ app.get('/push', function(request, response) {
     response.send('[push datastore]');
     // 内部のログ
     console.log('[push datastore : ' + MILKCOCOA_DATASTORE_ID + ']');
-    sampleDataStore.push({ text : "送信テスト" , host : request.headers.host });
+    console.log(request.query);
+    var sendValue = "送信テスト";  // text値のデフォルトは「送信テスト」
+    if(request.query.text){
+        sendValue = request.query.text;  // text値が存在する場合、採用する。
+    }
+    sampleDataStore.push({ text : sendValue , host : request.headers.host });
 });
 
 app.listen(app.get('port'), function() {
